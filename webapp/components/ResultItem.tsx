@@ -31,27 +31,24 @@ const ResultItem: FC<Props> = ({ result, query }) => {
     return transformedHtml;
   }, [query, text]);
 
-  const playHtml = useMemo(() => {
+  useMemo(() => {
     const transformedHtml = transformHTML(play_name, query);
     return transformedHtml;
   }, [query, play_name]);
 
   const sceneHtml = useMemo(() => {
     if (!scene_number) return "";
-    const transformedHtml = transformHTML(scene_number, query);
-    return transformedHtml;
+    return scene_number;
   }, [query, scene_number]);
 
   const actHtml = useMemo(() => {
     if (!act_number) return "";
-    const transformedHtml = transformHTML(act_number, query);
-    return transformedHtml;
+    return act_number;
   }, [query, act_number]);
 
   const characterHtml = useMemo(() => {
     if (!character) return "";
-    const transformedHtml = transformHTML(character, query);
-    return transformedHtml;
+    return character;
   }, [query, character]);
 
   return (

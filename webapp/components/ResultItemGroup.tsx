@@ -56,7 +56,7 @@ const ResultItemGroup: FC<Props> = ({ result, query }) => {
     <div className="bg-white p-4 rounded-md border border-zinc-200">
       <h3
         className="text-xl font-bold mb-2"
-        dangerouslySetInnerHTML={{ __html: playHtml }}
+        dangerouslySetInnerHTML={{ __html: play_name }}
       />
       <ul className="flex flex-col gap-1">
         {groupItems.map((item, i) => (
